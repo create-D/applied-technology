@@ -50,22 +50,26 @@
         if(ballFrame.origin.x <= 0){
             ballFrame.origin.x = 0;
             //添加空气阻力效果
-            _spend.x *= -0.7;
+            _spend.x *= -0.9;
+            
         }
         //右边
         if(ballFrame.origin.x >= self.view.bounds.size.width - ballFrame.size.width){
             ballFrame.origin.x = self.view.bounds.size.width - ballFrame.size.width;
-            _spend.x *= -0.7;
+            _spend.x *= -0.9;
+            
         }
         //上边
         if(ballFrame.origin.y <= 0){
             ballFrame.origin.y = 0;
-            _spend.y *= -0.7;
+            _spend.y *= -0.9;
+            
         }
         //下边
         if(ballFrame.origin.y >= self.view.bounds.size.height - ballFrame.size.height){
             ballFrame.origin.y = self.view.bounds.size.height - ballFrame.size.height;
-            _spend.y *= -0.7;
+            _spend.y *= -0.9;
+            
         }
         //改变frame
         self.ballView.frame = ballFrame;
